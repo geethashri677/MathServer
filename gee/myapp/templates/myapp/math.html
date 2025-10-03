@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>Body Mass Index</title>
+<h1 style="color:black"> GEETHA SHRI.G (25018001)</h1>
+<style>
+body
+{
+    background-color:mediumvioletred;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: x-large;
+    font-weight: 100;
+    display:flexbox;
+    
+}
+.edge {
+    width:1000px;
+margin-left:auto;
+margin-right:auto;
+padding-top:140px;
+padding-left:440px;
+}
+.box {
+display:block;
+border: solid 10px cyan;
+width:600px;
+height:400px;
+font-size: 30px; 
+background-color:lawngreen;
+}
+.formelt{ 
+    color:black; 
+    text-align: center; 
+    margin-top: 10px; 
+    margin-bottom: 5px;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+h1
+{
+color:deeppink;
+text-align:center;
+padding-top: 10px;
+}    
+</style>
+</head>
+<body>
+    <div class="edge">
+    <div class="box">
+    <h1>Body Mass Index</h1>
+    <form method="POST">
+    {%csrf_token%}
+    <div class="formelt">
+        Weight : <input type="text" name="Weight" value="{{w}}"></input>(in kg)<br/>
+    </div>
+    <div class="formelt">
+        Height : <input type="text" name="Height" value="{{h}}"></input>(in m)<br/>
+    </div>
+    <div class="formelt">
+        <input type="submit" value="calculate"></input><br/>
+    </div>
+    <div class="formelt">
+       Bmi :<input type="text" name="bmi" value="{{bmi}}"></input>kg/m<sup>2</sup><br/>
+    </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
